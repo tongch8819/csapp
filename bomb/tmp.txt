@@ -1,0 +1,29 @@
+phase 5:
+
+sreylf
+bbbbbb
+cccccc
+
+phase 6:
+
+loop 1:
+for i in range(6):
+    assert x[i] <= 6
+    for j in range(i+1, 6):
+        assert x[j] != x[i]
+
+loop 2:
+for i in range(6):
+    x[i] = 7 - x[i]
+
+loop 3: 
+output_3_arr = []
+for i in range(6):
+    node_idx = x[i]
+    node_ptr = nodes[node_idx]
+    output_3_arr.append( node_ptr )
+
+stage 4:
+re-link nodes by the reverse order of output_3_arr inplace
+
+stage 5:
